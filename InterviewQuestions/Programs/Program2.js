@@ -1,12 +1,15 @@
 function areAnagrams(str1, str2) {
     const normalizeStr = str => str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
 
+    // split each characters
     const arrStr1 = normalizeStr(str1).split('');
     const arrStr2 = normalizeStr(str2).split('');
 
+    //sort both arrays and join each characters
     const sortedStr1 = arrStr1.sort().join('');
     const sortedStr2 = arrStr2.sort().join('');
 
+    //compare the sorted array
     return sortedStr1 === sortedStr2;
 }
 
